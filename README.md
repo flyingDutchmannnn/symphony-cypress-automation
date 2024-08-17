@@ -18,25 +18,25 @@ Before running the Cypress tests on another machine, ensure the following prereq
 
 Start by cloning the repository to your local machine:
 
-\`\`\`bash
+```bash
 git clone https://github.com/flyingDutchmannnn/symphony-cypress-automation.git
-\`\`\`
+```
 
 ### 2. Navigate to the Project Directory
 
 Change to the project directory:
 
-\`\`\`bash
+```bash
 cd cypress-automation-task
-\`\`\`
+```
 
 ### 3. Install Dependencies
 
 Install all necessary npm packages by running:
 
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 This will install Cypress and other dependencies listed in the \`package.json\` file.
 
@@ -50,17 +50,17 @@ If specific configurations are needed, modify the Cypress configuration file (\`
 
 To open the Cypress Test Runner and run tests interactively:
 
-\`\`\`bash
+```bash
 npx cypress open
-\`\`\`
+```
 
 ### 2. Run Tests in Headless Mode
 
 To run all tests in headless mode:
 
-\`\`\`bash
+```bash
 npx cypress run
-\`\`\`
+```
 
 This command will execute all tests in the \`cypress/e2e\` directory without opening the UI.
 
@@ -68,9 +68,9 @@ This command will execute all tests in the \`cypress/e2e\` directory without ope
 
 To run a specific test file in headless mode:
 
-\`\`\`bash
+```bash
 npx cypress run --spec "cypress/symphony/core/e2e/**/*.spec.ts"
-\`\`\`
+```
 
 ## Troubleshooting
 
