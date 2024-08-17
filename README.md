@@ -77,6 +77,44 @@ npx cypress run --spec "cypress/symphony/core/e2e/**/*.spec.ts"
 - **Cypress Not Found**: If Cypress isn't recognized, run \`npm install\` to ensure all dependencies are correctly installed.
 - **Node Version Issues**: Make sure you're using the correct version of Node.js. You can manage versions using \`nvm\`.
 
+## Security Improvements
+
+To enhance security, especially for sensitive data like passwords and API tokens, following practices can be implemented:
+
+- **Use Environment Variables:**
+  - Store sensitive data in environment variables instead of hardcoding them in files.
+  - Create a `.env` file locally with key-value pairs, such as:
+    ```plaintext
+    CYPRESS_USER_PASSWORD=your_secure_password
+    CYPRESS_API_TOKEN=your_secure_api_token
+    ```
+  - Ensure the `.env` file is added to `.gitignore` to keep it out of version control.
+
+- **Accessing Environment Variables in Cypress:**
+  - Use `Cypress.env()` in your tests to access environment variables:
+    ```typescript
+    const password = Cypress.env('USER_PASSWORD');
+    cy.get('input[type="password"]').type(password);
+    ```
+
+- **Secure CI/CD Pipelines:**
+  - In CI/CD environments (e.g., Azure Pipelines, GitHub Actions), store sensitive data in the pipeline's secret management system.
+  - For Azure Pipelines:
+    ```yaml
+    variables:
+      - name: CYPRESS_USER_PASSWORD
+        value: $(USER_PASSWORD) 
+    ```
+  - For GitHub Actions:
+    ```yaml
+    env:
+      CYPRESS_USER_PASSWORD: ${{ secrets.CYPRESS_USER_PASSWORD }}
+    ```
+
+- **Encryption:**
+  - Store secrets in Azure Key Vault or GitHub Secrets, ensuring they are encrypted at rest and in transit.
+
+
 ## Additional Resources
 
 - [Cypress Documentation](https://docs.cypress.io/guides/overview/why-cypress)
