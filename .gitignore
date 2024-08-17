@@ -1,0 +1,41 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Cypress specific files and folders
+cypress/screenshots/
+cypress/downloads/
+
+# Output of 'npm pack'
+*.tgz
+
+# dotenv environment variables file
+.env
+
+# IDE specific files
+.vscode/
+.idea/
+.DS_Store
+
+# Logs
+logs
+*.log
+
+# OS generated files
+Thumbs.db
+.DS_Store
+
+# Optional npm cache directory
+.npm
+
+# Cypress Binary Cache
+cypress/binary/
+
+# Build directories
+dist/
+out/
+
+# Coverage directory used by tools like istanbul
+coverage/

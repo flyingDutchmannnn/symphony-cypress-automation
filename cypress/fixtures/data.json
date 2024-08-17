@@ -1,0 +1,30 @@
+{
+  "company": {
+    "HQ": "San Francisco",
+    "founded": "2007",
+    "consultingLocations": [
+      "Amsterdam",
+      "Berlin",
+      "Geneva",
+      "London",
+      "Los Angeles",
+      "Madrid",
+      "New York",
+      "Portland",
+      "Zürich"
+    ],
+    "engineeringHubs": [
+      "Banja Luka",
+      "Belgrade",
+      "Nis",
+      "Novi Sad",
+      "Santo Domingo",
+      "Sarajevo",
+      "Skopje"
+    ],
+    "clients": "300+"
+  },
+  "careers": {
+    "numberOfCurrentOpenings": 20
+  }
+}
